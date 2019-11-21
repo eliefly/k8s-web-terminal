@@ -11,12 +11,12 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/style.css', function(req, res){
-  res.sendFile(__dirname + '/style.css');
+app.get('/terminal.css', function (req, res) {
+  res.sendFile(__dirname + '/terminal.css');
 });
 
-app.get('/main.js', function(req, res){
-  res.sendFile(__dirname + '/main.js');
+app.get('/terminal.js', function (req, res) {
+  res.sendFile(__dirname + '/terminal.js');
 });
 
 app.ws('/bash', function(ws, req) {

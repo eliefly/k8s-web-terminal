@@ -73,7 +73,7 @@ function createTerminal(name, namespace, container, command) {
   console.log(term.rows);
 
   var protocol = (location.protocol === 'https:') ? 'wss://' : 'ws://';
-  var socketURL = protocol + location.hostname + ((location.port) ? (':' + location.port) : '') + '/container/terminal/shell/ws';
+    var socketURL = protocol + location.hostname + ((location.port) ? (':' + location.port) : '') + '/ws/container/terminal';
   socketURL += '?name=' + name + '&namespace=' + namespace + '&container='+ container + '&cols=' + term.cols + '&rows=' + term.rows;
   socket = new ReconnectingWebSocket(socketURL);
   socket.debug = false;
